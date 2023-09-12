@@ -9,7 +9,8 @@ Minha participação Minha participação na Rinha de compiladores (ou interpret
 
 ## Tech Stack
 
-**C++** | **CMake** | **Bash**
+**C++** | **CMake** | **Shell**
+
 ## Run from image ([ghrc.io](https://ghrc.io))
 
 Adicione a imagem ao Docker
