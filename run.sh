@@ -7,5 +7,5 @@ if [ ! "$(docker ps -a -q -f name=soulrinha-compiler)" ]; then
     fi
 
     # run your container
-    docker run --mount type=bind,source="$(pwd)/var/rinha",target=/var/rinha -d --name soulrinha-compiler rinha/soulrinha
+    docker run --cpus=2 -m 2048m --mount type=bind,source="$(pwd)/var/rinha",target=/var/rinha -d --name soulrinha-compiler rinha/soulrinha
 fi
