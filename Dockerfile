@@ -34,6 +34,7 @@ USER rinha
 
 # Copy build
 COPY --chown=rinha:rinha --from=build ./soulrinha/build/src/soulrinha /usr/local/bin
+COPY --chown=rinha:rinha ./var/rinha /var/rinha
 
 # Define entrypoint
 ENTRYPOINT [ "/usr/local/bin/soulrinha" ]
