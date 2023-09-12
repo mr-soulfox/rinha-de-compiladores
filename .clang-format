@@ -1,0 +1,12 @@
+---
+BasedOnStyle: Google
+---
+Language: Cpp
+AccessModifierOffset: -3
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+ColumnLimit: 95
+IndentWidth: 2
+UseTab: Never
+---
