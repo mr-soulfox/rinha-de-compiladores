@@ -22,7 +22,7 @@ FROM alpine:3.18.3
 
 # Define Labels
 LABEL maintainer="Marcos Paulo <marcos@soulfox.dev>"
-LABEL description="Compiler to use in Rinha de Compilers, created by aripiprazole"
+LABEL description="Compiler/Interpreter to use in Rinha de Compilers, mediate by aripiprazole"
 
 # Update and install libs to run mount final image
 RUN apk update
