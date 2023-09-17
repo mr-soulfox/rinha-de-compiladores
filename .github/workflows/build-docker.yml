@@ -31,9 +31,7 @@ jobs:
         uses: docker/metadata-action@v5.0.0
         with:
           images: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
-          tags:
-            type=ref,event=branch
-            type=sha
+          tags: 'latest'
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5.0.0
