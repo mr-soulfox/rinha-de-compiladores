@@ -1,84 +1,62 @@
+# Rinha de Compiladores (C++)
 
 ![Logo](https://raw.githubusercontent.com/mr-soulfox/rinha-de-compiler/main/img/banner.png)
 
-
-# Rinha de Compiladores (C++)
-
-Minha participação Minha participação na Rinha de compiladores (ou interpretadores) criado e mediado  por [@aripiprazole](https://github.com/aripiprazole) & [@algebraic-sofia](https://github.com/algebraic-sofia)
-
+My participation in the 'Rinha de Compiladores (ou interpretadores)' created and mediated by [@aripiprazole](https://github.com/aripiprazole) & [@algebraic-sofia](https://github.com/algebraic-sofia).
 
 ## Tech Stack
 
-**C++** | **CMake** | **Shell**
+**C++** | **CMake** | **Docker**
 
-## Run from image ([ghrc.io](https://ghrc.io))
+## Run from image ([pkg](https://github.com/mr-soulfox/soulrinha/pkgs/container/soulrinha))
 
-Adicione a imagem ao Docker
+Use to run container.
 
-```bash
-  docker pull ghcr.io/mr-soulfox/soulrinha:latest
-```
-
-Agora rode a imagem.
-
-Obs.: troque o _<mount_point>_ pelo caminho até o diretorio com os arquivos (**.rinha** ou **.json**)
+Note: replace the _<mount_point>_ with the path to directory with the files (**.rinha** or **.json**).
 
 ```bash
-  docker run --mount type=bind,source="<mount_point>",target=/var/rinha -d --name soulrinha-compiler rinha/soulrinha:latest
+  docker run --mount type=bind,source="<mount_point>",target=/var/rinha -d --name soulrinha-compiler ghcr.io/mr-soulfox/soulrinha:latest
 ```
 
-Caso queira rodar limitando a quantidade de CPU e a quantidade de  memoria.
+Use to run container with only 2 CPUs and 2GiB memory ram.
 
-Obs.: troque o _<mount_point>_ pelo caminho até o diretorio com os arquivos (**.rinha** ou **.json**)
+Note: replace the _<mount_point>_ with the path to directory with the files (**.rinha** or **.json**).
 
 ```bash
   docker run --cpus=2 -m 2048m --mount type=bind,source="<mount_point>",target=/var/rinha -d --name soulrinha-compiler rinha/soulrinha:latest
 ```
 
-## Run from Compose
+## Run from source (Docker Compose)
 
-Clone o repositório
+Clone repository and enter in directory.
 
 ```bash
-  git clone https://github.com/mr-soulfox/soulrinha
+  git clone https://github.com/mr-soulfox/soulrinha && cd soulrinha
 ```
 
-Entre no diretório do projeto
+Place the files you want to run (.rinha or .json) in **var/rinha** folder, and up container.
 
 ```bash
-  cd soulrinha
-```
-
-Coloque os arquivos que deseja rodar (.rinha | .json) na pasta **var/rinha** e execute
-
-```bash
-  bash ./start.sh -c
+  docker-compose up
 ```
 
 ## Run from source
 
-Clone o repositório
+Clone repository and enter in directory.
 
 ```bash
-  git clone https://github.com/mr-soulfox/soulrinha
+  git clone https://github.com/mr-soulfox/soulrinha && cd soulrinha
 ```
 
-Entre no diretório do projeto
+Place the files you want to run (.rinha or .json) in **var/rinha** folder, and run the **start.sh** script to initialize.
 
 ```bash
-  cd soulrinha
-```
-
-Coloque os arquivos que deseja rodar (.rinha | .json) na pasta **var/rinha** e rode o _Script_
-
-```bash
-  bash ./start.sh -s
+  bash ./start.sh
 ```
 
 ## Authors
 
 [@mr-soulfox](https://www.github.com/mr-soulfox)
-
 
 ## License
 
