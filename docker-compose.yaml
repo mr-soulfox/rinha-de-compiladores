@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  soulrinha-compiler:
+    image: "ghcr.io/mr-soulfox/soulrinha:latest"
+    container_name: soulrinha
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: '2G'
+    volumes:
+      - ./var/rinha:/var/rinha

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.5)
 
 # Description and Meta Info
 
@@ -15,6 +15,5 @@ set(RINHA_COMPILER_NAME_VERSION "${RINHA_COMPILER_VERSION_MAJOR} v${RINHA_COMPIL
 set(RINHA_COMPILER_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 
 # Declare
-
 project(${RINHA_COMPILER_NAME})
 add_subdirectory(src)

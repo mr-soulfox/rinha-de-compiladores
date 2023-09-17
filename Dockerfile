@@ -14,7 +14,7 @@ COPY CMakeLists.txt .
 # Build
 WORKDIR /soulrinha/build
 
-RUN cmake -DCMAKE_BUILD_TYPE=Release .. 
+RUN cmake -DCMAKE_BUILD_TYPE=Release ..
 RUN cmake --build . --parallel 8
 
 ## Mount final image

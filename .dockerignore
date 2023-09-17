@@ -3,6 +3,7 @@
 .git
 .github
 .gitignore
+build
 *.md
 LICENSE
 build.sh
