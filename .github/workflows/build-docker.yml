@@ -37,6 +37,8 @@ jobs:
         uses: docker/build-push-action@v5.0.0
         with:
           context: .
+          build-args: |
+            BTPSA_VERSION_GIT_ARG=${{ github.sha }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
