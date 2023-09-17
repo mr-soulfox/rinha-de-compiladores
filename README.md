@@ -16,7 +16,7 @@ Minha participação Minha participação na Rinha de compiladores (ou interpret
 Adicione a imagem ao Docker
 
 ```bash
-  docker push ghcr.io/mr-soulfox/soulrinha:latest
+  docker pull ghcr.io/mr-soulfox/soulrinha:latest
 ```
 
 Agora rode a imagem.
