@@ -35,10 +35,16 @@ jobs:
             latest,event=branch
             type=sha
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3.0.0
+        with:
+          install: true
+
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5.0.0
         with:
           context: .
           push: true
+          provenance: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
