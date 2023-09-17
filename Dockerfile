@@ -36,5 +36,8 @@ USER rinha
 COPY --chown=rinha:rinha --from=build ./soulrinha/build/src/soulrinha /usr/local/bin
 COPY --chown=rinha:rinha ./var/rinha /var/rinha
 
+# Add to PATH
+ENV PATH="${PATH}:/usr/local/bin/soulrinha"
+
 # Define entrypoint
-ENTRYPOINT [ "/usr/local/bin/soulrinha" ]
+ENTRYPOINT [ "tail", "-f", "/dev/null" ]
