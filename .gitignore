@@ -35,3 +35,5 @@
 *.backup
 *.md.backup
 build
+.cache
+*.txt
