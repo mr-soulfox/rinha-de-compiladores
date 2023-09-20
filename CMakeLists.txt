@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 # Description and Meta Info
 
@@ -17,3 +17,12 @@ set(RINHA_COMPILER_SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 # Declare
 project(${RINHA_COMPILER_NAME})
 add_subdirectory(src)
+
+# Dependencies
+
+include(cmake/CPM.cmake)
+CPMAddPackage(
+  NAME nlohmann_json
+  GITHUB_REPOSITORY nlohmann/json
+  VERSION 3.9.1
+)

@@ -3,12 +3,13 @@ FROM alpine:3.18.3 AS build
 
 # Update and install build libs in Alpine
 RUN apk update
-RUN apk add --no-cache build-base cmake
+RUN apk add --no-cache build-base cmake git
 
 # Copy
 WORKDIR /soulrinha
 
 COPY src/ ./src/
+COPY cmake ./cmake
 COPY CMakeLists.txt .
 
 # Build
